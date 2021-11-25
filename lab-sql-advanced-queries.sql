@@ -28,4 +28,5 @@ join
 (select fa2.actor_id, a2.first_name, a2.last_name, fa2.film_id, f2.title from sakila.film_actor fa2 join sakila.film f2 on fa2.film_id= f2.film_id 
 join sakila.actor a2 on fa2.actor_id=a2.actor_id) sub2
 on sub1.actor_id = sub2.actor_id
-and sub1.film_id <>sub2.film_id;
+and sub1.film_id <>sub2.film_id
+order by sub1.title;
